@@ -87,6 +87,11 @@ func main() {
 	router.HandleFunc("/emoji", getEmoji).Methods("GET")
 
 	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8000"
+	}
+
 	log.Fatal(http.ListenAndServe(":"+port, router))
 
 }
