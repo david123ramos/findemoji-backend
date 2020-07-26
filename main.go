@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -84,6 +85,8 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/emoji", getEmoji).Methods("GET")
-	log.Fatal(http.ListenAndServe(":8000", router))
+
+	port := os.Getenv("PORT")
+	log.Fatal(http.ListenAndServe(":"+port, router))
 
 }
