@@ -1,5 +1,6 @@
 package main
 
+//Estrutura usada no parse do json que a api de tradução retorna
 type Response struct {
 	ResponseData ResponseData
 	Rest         Rest
@@ -38,6 +39,7 @@ type RestArray struct {
 	Model          string
 }
 
+//Estruturas usadas para enviar uma resposta ao front-end
 type NotFoundEmoji struct {
 	Message string `json:"Message,omitempty"`
 }
