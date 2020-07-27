@@ -7,7 +7,7 @@ Fiz uso do pacote [MUX](https://github.com/gorilla/mux) para definir a rota da A
 ## Endpoint
 
 Faça a chamada a essa url onde "{}" deve ser substituído pela string a ser buscada
-###### Exemplo https://buscaemoji.herokuapp.com/emoji?s=cachorro
+###### Exemplo GET> https://buscaemoji.herokuapp.com/emoji?s=cachorro
 
 ```
   https://buscaemoji.herokuapp.com/emoji?s={}  
